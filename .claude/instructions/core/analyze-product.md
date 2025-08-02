@@ -13,7 +13,7 @@ encoding: UTF-8
 Install  into an existing codebase, analyze current product state and progress. Builds on plan-product.md
 
 <pre_flight_check>
-  EXECUTE: @~/.claude/instructions/meta/pre-flight.md
+  EXECUTE: .claude/instructions/meta/pre-flight.md
 </pre_flight_check>
 
 <process_flow>
@@ -105,7 +105,7 @@ Execute our standard flow for installing  in existing products
 </execution_parameters>
 
 <execution_prompt>
-  @~/.claude/instructions/core/plan-product.md
+  .claude/instructions/core/plan-product.md
 
   I'm installing  into an existing product. Here's what I've gathered:
 
@@ -208,7 +208,7 @@ Verify installation completeness and provide clear next steps for the user to st
   2. Make any necessary adjustments to reflect your vision
   3. Start using  for your next feature:
      ```
-     @~/.claude/instructions/core/create-spec.md
+     .claude/instructions/core/create-spec.md
      ```
 
   Your codebase is now -enabled! 🚀
