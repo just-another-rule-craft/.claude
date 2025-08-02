@@ -247,3 +247,17 @@ The system is designed to be extensible:
 5. **Collaboration**: Standardized documentation and processes
 
 This system represents a complete solution for professional Phoenix application development with AI assistance, providing structure, consistency, and efficiency throughout the entire development process.
+
+## Inspiration and Credits
+
+This project was inspired by the excellent work done in [agent-os](https://github.com/buildermethods/agent-os/tree/main) by the creator at Builder Methods. Their innovative approach to AI-driven development workflows provided the foundational concepts that we've adapted and extended for Phoenix development.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+### MIT License Summary
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files, to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software.
+
+**This is completely open source software - you are free to use, modify, and distribute it as you see fit.**

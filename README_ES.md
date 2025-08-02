@@ -247,3 +247,17 @@ El sistema está diseñado para ser extensible:
 5. **Colaboración**: Documentación y procesos estandarizados
 
 Este sistema representa una solución completa para el desarrollo profesional de aplicaciones Phoenix con asistencia de IA, proporcionando estructura, consistencia y eficiencia en todo el proceso de desarrollo.
+
+## Inspiración y Créditos
+
+Este proyecto se inspiró en el excelente trabajo realizado en [agent-os](https://github.com/buildermethods/agent-os/tree/main) por el creador en Builder Methods. Su enfoque innovador hacia los flujos de trabajo de desarrollo impulsados por IA proporcionó los conceptos fundamentales que hemos adaptado y extendido para el desarrollo con Phoenix.
+
+## Licencia
+
+Este proyecto está licenciado bajo la Licencia MIT - consulta el archivo [LICENSE](LICENSE) para más detalles.
+
+### Resumen de la Licencia MIT
+
+Se concede permiso, de forma gratuita, a cualquier persona que obtenga una copia de este software y los archivos de documentación asociados, para utilizar el Software sin restricciones, incluyendo sin limitación los derechos de usar, copiar, modificar, fusionar, publicar, distribuir, sublicenciar y/o vender copias del Software.
+
+**Este es software completamente de código abierto - eres libre de usarlo, modificarlo y distribuirlo como consideres conveniente.**
