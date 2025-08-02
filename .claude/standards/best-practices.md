@@ -67,30 +67,26 @@ When adding third-party dependencies to your Elixir/Phoenix project:
 - Review issue resolution patterns and response times
 - Check CI/CD status and test coverage
 - Look for clear contribution guidelines
+</conditional-block>
 
-#### Prefer Established Libraries
-- Phoenix ecosystem: Choose well-known packages like Ecto, LiveView, Oban
-- Authentication: Consider Pow, Guardian, or Phx.Gen.Auth
-- Testing: ExUnit (built-in), ExMachina, Mox for mocking
-- HTTP clients: HTTPoison, Tesla, Finch (newer alternative)
+<conditional-block context-check="read-documentation-of-libraries">
+IF documentation exists in `.claude/libraries_docs` or `.claude/phoenix_guides/*/**`:
+  READ: The following guidelines
+ELSE:
+  FETCH: Use the following process to gather library documentation
 
-#### Add to mix.exs Thoughtfully
-```elixir
-# Group dependencies by purpose and add comments
-defp deps do
-  [
-    # Phoenix framework
-    {:phoenix, "~> 1.7.0"},
-    {:phoenix_live_view, "~> 0.20.0"},
+  1. **Search documentation for project dependencies**:
+     ```bash
+     # Search documentation for specific packages
+     mix usage_rules.search_docs "search term" -p [name of library] -p [another library]
+     ```
 
-    # Database
-    {:ecto_sql, "~> 3.10"},
-    {:postgrex, ">= 0.0.0"},
-
-    # Development and testing only
-    {:phoenix_live_reload, "~> 1.2", only: :dev},
-    {:ex_machina, "~> 2.7", only: [:test, :dev]}
-  ]
-end
-```
+  2. **Sync individual library documentation**:
+     ```bash
+     # For each library, create individual documentation file
+     mix usage_rules.sync libraries_docs/[name of library].md [name of library]
+     ```
+  THEN: Re-read this section to access the gathered documentation
+ELSE:
+  SKIP: Library documentation section not relevant to current task
 </conditional-block>
