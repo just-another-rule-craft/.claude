@@ -46,12 +46,51 @@ ELSE:
 
 ## Dependencies
 
-### Choose Libraries Wisely
-When adding third-party dependencies:
-- Select the most popular and actively maintained option
-- Check the library's GitHub repository for:
-  - Recent commits (within last 6 months)
-  - Active issue resolution
-  - Number of stars/downloads
-  - Clear documentation
+### Choose Hex Packages Wisely
+When adding third-party dependencies to your Elixir/Phoenix project:
+
+#### Research on Hex.pm
+- Visit https://hex.pm and search for packages
+- Check the package's download statistics (prefer packages with higher weekly downloads)
+- Review the package version history for stability indicators
+- Look for packages with semantic versioning practices
+
+#### Evaluate Package Quality
+- **Documentation**: Ensure comprehensive docs on hex.pm with examples
+- **Maintenance**: Check for regular releases and bug fixes
+- **Community**: Look for packages used by popular projects
+- **OTP Compatibility**: Verify support for your Elixir/OTP versions
+
+#### Check the Source Repository
+- Visit the GitHub/GitLab repository linked from hex.pm
+- Verify recent commits (within last 6 months for active packages)
+- Review issue resolution patterns and response times
+- Check CI/CD status and test coverage
+- Look for clear contribution guidelines
+
+#### Prefer Established Libraries
+- Phoenix ecosystem: Choose well-known packages like Ecto, LiveView, Oban
+- Authentication: Consider Pow, Guardian, or Phx.Gen.Auth
+- Testing: ExUnit (built-in), ExMachina, Mox for mocking
+- HTTP clients: HTTPoison, Tesla, Finch (newer alternative)
+
+#### Add to mix.exs Thoughtfully
+```elixir
+# Group dependencies by purpose and add comments
+defp deps do
+  [
+    # Phoenix framework
+    {:phoenix, "~> 1.7.0"},
+    {:phoenix_live_view, "~> 0.20.0"},
+
+    # Database
+    {:ecto_sql, "~> 3.10"},
+    {:postgrex, ">= 0.0.0"},
+
+    # Development and testing only
+    {:phoenix_live_reload, "~> 1.2", only: :dev},
+    {:ex_machina, "~> 2.7", only: [:test, :dev]}
+  ]
+end
+```
 </conditional-block>
