@@ -56,7 +56,7 @@ Always include:
 ### Complete Workflow
 ```
 Complete git workflow for password-reset feature:
-- Spec: .claude/specs/2025-01-29-password-reset/
+- Spec:#file:.claude/specs/2025-01-29-password-reset/
 - Changes: All files modified
 - Target: main branch
 ```

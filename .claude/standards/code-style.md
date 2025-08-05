@@ -18,8 +18,8 @@ IF current task involves writing or updating HTML, CSS, or TailwindCSS:
         PROCESS: Returned style rules
       ELSE:
         READ the following style guides (only if not already in context):
-        - .claude/standards/code-style/html-style.md (if not in context)
-        - .claude/standards/code-style/css-style.md (if not in context)
+        -#file:.claude/standards/code-style/html-style.md (if not in context)
+        -#file:.claude/standards/code-style/css-style.md (if not in context)
     </context_fetcher_strategy>
 ELSE:
   SKIP: HTML/CSS style guides not relevant to current task
@@ -38,7 +38,7 @@ IF current task involves writing or updating Phoenix controllers:
         PROCESS: Returned controller guide
       ELSE:
         READ the following guide (only if not already in context):
-        - .claude/phoenix_guide/controllers.md (if not in context)
+        -#file:.claude/phoenix_guide/controllers.md (if not in context)
     </context_fetcher_strategy>
 ELSE:
   SKIP: Phoenix controllers guide not relevant to current task
@@ -57,7 +57,7 @@ IF current task involves security, authentication, authorization, or handling un
         PROCESS: Returned security guide
       ELSE:
         READ the following guide (only if not already in context):
-        - .claude/phoenix_guide/security.md (if not in context)
+        -#file:.claude/phoenix_guide/security.md (if not in context)
     </context_fetcher_strategy>
 ELSE:
   SKIP: Phoenix security guide not relevant to current task
@@ -76,7 +76,7 @@ IF current task involves Phoenix contexts, data modeling, or database operations
         PROCESS: Returned contexts guide
       ELSE:
         READ the following guide (only if not already in context):
-        - .claude/phoenix_guide/data_modelling/contexts.md (if not in context)
+        -#file:.claude/phoenix_guide/data_modelling/contexts.md (if not in context)
     </context_fetcher_strategy>
 ELSE:
   SKIP: Phoenix contexts guide not relevant to current task
@@ -95,7 +95,7 @@ IF current task involves deployment, hosting, or production configuration:
         PROCESS: Returned deployment guide
       ELSE:
         READ the following guide (only if not already in context):
-        - .claude/phoenix_guide/deployment/deployment.md (if not in context)
+        -#file:.claude/phoenix_guide/deployment/deployment.md (if not in context)
     </context_fetcher_strategy>
 ELSE:
   SKIP: Phoenix deployment guide not relevant to current task
@@ -114,7 +114,7 @@ IF current task involves asset management, CSS, JavaScript, or static files:
         PROCESS: Returned asset management guide
       ELSE:
         READ the following guide (only if not already in context):
-        - .claude/phoenix_guide/asset_management.md (if not in context)
+        -#file:.claude/phoenix_guide/asset_management.md (if not in context)
     </context_fetcher_strategy>
 ELSE:
   SKIP: Phoenix asset management guide not relevant to current task
@@ -133,7 +133,7 @@ IF current task involves telemetry, metrics, monitoring, or performance tracking
         PROCESS: Returned telemetry guide
       ELSE:
         READ the following guide (only if not already in context):
-        - .claude/phoenix_guide/telemetry.md (if not in context)
+        -#file:.claude/phoenix_guide/telemetry.md (if not in context)
     </context_fetcher_strategy>
 ELSE:
   SKIP: Phoenix telemetry guide not relevant to current task
@@ -152,11 +152,11 @@ IF current task involves SSL, file uploads, custom error pages, or database swap
         PROCESS: Returned howto guides
       ELSE:
         READ the following guides as needed (only if not already in context):
-        - .claude/phoenix_guide/howto/using_ssl.md (for SSL tasks)
-        - .claude/phoenix_guide/howto/file_uploads.md (for file upload tasks)
-        - .claude/phoenix_guide/howto/custom_error_pages.md (for error page tasks)
-        - .claude/phoenix_guide/howto/swapping_databases.md (for database tasks)
-        - .claude/phoenix_guide/howto/writing_a_channels_client.md (for channels tasks)
+        -#file:.claude/phoenix_guide/howto/using_ssl.md (for SSL tasks)
+        -#file:.claude/phoenix_guide/howto/file_uploads.md (for file upload tasks)
+        -#file:.claude/phoenix_guide/howto/custom_error_pages.md (for error page tasks)
+        -#file:.claude/phoenix_guide/howto/swapping_databases.md (for database tasks)
+        -#file:.claude/phoenix_guide/howto/writing_a_channels_client.md (for channels tasks)
     </context_fetcher_strategy>
 ELSE:
   SKIP: Phoenix howto guides not relevant to current task
@@ -175,7 +175,7 @@ IF current task involves Phoenix routing, URL patterns, or route helpers:
         PROCESS: Returned router cheatsheet
       ELSE:
         READ the following cheatsheet (only if not already in context):
-        - .claude/phoenix_guide/cheatsheets/router.cheatmd (if not in context)
+        -#file:.claude/phoenix_guide/cheatsheets/router.cheatmd (if not in context)
     </context_fetcher_strategy>
 ELSE:
   SKIP: Phoenix router cheatsheet not relevant to current task
@@ -194,7 +194,7 @@ IF current task involves project organization, file structure, or code architect
         PROCESS: Returned structure guide
       ELSE:
         READ the following guide (only if not already in context):
-        - .claude/phoenix_guide/directory_structure.md (if not in context)
+        -#file:.claude/phoenix_guide/directory_structure.md (if not in context)
     </context_fetcher_strategy>
 ELSE:
   SKIP: Phoenix directory structure guide not relevant to current task
@@ -213,7 +213,7 @@ IF current task involves creating your first Phoenix context or understanding co
         PROCESS: Returned first context guide
       ELSE:
         READ the following guide (only if not already in context):
-        - .claude/phoenix_guide/data_modelling/your_first_context.md (if not in context)
+        -#file:.claude/phoenix_guide/data_modelling/your_first_context.md (if not in context)
     </context_fetcher_strategy>
 ELSE:
   SKIP: Phoenix first context guide not relevant to current task
@@ -232,7 +232,7 @@ IF current task involves relationships within contexts or data associations:
         PROCESS: Returned context relationships guide
       ELSE:
         READ the following guide (only if not already in context):
-        - .claude/phoenix_guide/data_modelling/in_context_relationships.md (if not in context)
+        -#file:.claude/phoenix_guide/data_modelling/in_context_relationships.md (if not in context)
     </context_fetcher_strategy>
 ELSE:
   SKIP: Phoenix context relationships guide not relevant to current task
@@ -251,7 +251,7 @@ IF current task involves cross-context boundaries or inter-context communication
         PROCESS: Returned cross-context guide
       ELSE:
         READ the following guide (only if not already in context):
-        - .claude/phoenix_guide/data_modelling/cross_context_boundaries.md (if not in context)
+        -#file:.claude/phoenix_guide/data_modelling/cross_context_boundaries.md (if not in context)
     </context_fetcher_strategy>
 ELSE:
   SKIP: Phoenix cross-context boundaries guide not relevant to current task
@@ -270,7 +270,7 @@ IF current task involves data modeling examples or advanced patterns:
         PROCESS: Returned data modeling examples
       ELSE:
         READ the following guide (only if not already in context):
-        - .claude/phoenix_guide/data_modelling/more_examples.md (if not in context)
+        -#file:.claude/phoenix_guide/data_modelling/more_examples.md (if not in context)
     </context_fetcher_strategy>
 ELSE:
   SKIP: Phoenix data modeling examples not relevant to current task
@@ -289,7 +289,7 @@ IF current task involves troubleshooting data modeling or common questions:
         PROCESS: Returned data modeling FAQ
       ELSE:
         READ the following guide (only if not already in context):
-        - .claude/phoenix_guide/data_modelling/faq.md (if not in context)
+        -#file:.claude/phoenix_guide/data_modelling/faq.md (if not in context)
     </context_fetcher_strategy>
 ELSE:
   SKIP: Phoenix data modeling FAQ not relevant to current task
@@ -308,7 +308,7 @@ IF current task involves Heroku deployment or Heroku-specific configuration:
         PROCESS: Returned Heroku deployment guide
       ELSE:
         READ the following guide (only if not already in context):
-        - .claude/phoenix_guide/deployment/heroku.md (if not in context)
+        -#file:.claude/phoenix_guide/deployment/heroku.md (if not in context)
     </context_fetcher_strategy>
 ELSE:
   SKIP: Phoenix Heroku deployment guide not relevant to current task
@@ -327,7 +327,7 @@ IF current task involves Gigalixir deployment or Gigalixir-specific configuratio
         PROCESS: Returned Gigalixir deployment guide
       ELSE:
         READ the following guide (only if not already in context):
-        - .claude/phoenix_guide/deployment/gigalixir.md (if not in context)
+        -#file:.claude/phoenix_guide/deployment/gigalixir.md (if not in context)
     </context_fetcher_strategy>
 ELSE:
   SKIP: Phoenix Gigalixir deployment guide not relevant to current task
@@ -346,7 +346,7 @@ IF current task involves SSL setup, HTTPS configuration, or TLS certificates:
         PROCESS: Returned SSL setup guide
       ELSE:
         READ the following guide (only if not already in context):
-        - .claude/phoenix_guide/howto/using_ssl.md (if not in context)
+        -#file:.claude/phoenix_guide/howto/using_ssl.md (if not in context)
     </context_fetcher_strategy>
 ELSE:
   SKIP: Phoenix SSL setup guide not relevant to current task
@@ -365,7 +365,7 @@ IF current task involves file uploads, multipart forms, or file handling:
         PROCESS: Returned file uploads guide
       ELSE:
         READ the following guide (only if not already in context):
-        - .claude/phoenix_guide/howto/file_uploads.md (if not in context)
+        -#file:.claude/phoenix_guide/howto/file_uploads.md (if not in context)
     </context_fetcher_strategy>
 ELSE:
   SKIP: Phoenix file uploads guide not relevant to current task
@@ -384,7 +384,7 @@ IF current task involves custom error pages, error handling, or error templates:
         PROCESS: Returned custom error pages guide
       ELSE:
         READ the following guide (only if not already in context):
-        - .claude/phoenix_guide/howto/custom_error_pages.md (if not in context)
+        -#file:.claude/phoenix_guide/howto/custom_error_pages.md (if not in context)
     </context_fetcher_strategy>
 ELSE:
   SKIP: Phoenix custom error pages guide not relevant to current task
@@ -403,7 +403,7 @@ IF current task involves database swapping, database migration, or changing data
         PROCESS: Returned database swapping guide
       ELSE:
         READ the following guide (only if not already in context):
-        - .claude/phoenix_guide/howto/swapping_databases.md (if not in context)
+        -#file:.claude/phoenix_guide/howto/swapping_databases.md (if not in context)
     </context_fetcher_strategy>
 ELSE:
   SKIP: Phoenix database swapping guide not relevant to current task
@@ -422,7 +422,7 @@ IF current task involves writing Phoenix channels clients or WebSocket clients:
         PROCESS: Returned channels client guide
       ELSE:
         READ the following guide (only if not already in context):
-        - .claude/phoenix_guide/howto/writing_a_channels_client.md (if not in context)
+        -#file:.claude/phoenix_guide/howto/writing_a_channels_client.md (if not in context)
     </context_fetcher_strategy>
 ELSE:
   SKIP: Phoenix channels client guide not relevant to current task

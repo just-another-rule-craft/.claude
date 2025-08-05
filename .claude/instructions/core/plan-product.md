@@ -13,7 +13,7 @@ encoding: UTF-8
 Generate product docs for new projects: mission, tech-stack, roadmap, decisions files for AI agent consumption.
 
 <pre_flight_check>
-  EXECUTE: .claude/instructions/meta/pre-flight.md
+  EXECUTE:#file:.claude/instructions/meta/pre-flight.md
 </pre_flight_check>
 
 <process_flow>
@@ -27,8 +27,8 @@ Use the context-fetcher subagent to collect all required inp duts from the user 
 <data_sources>
   <primary>user_direct_input</primary>
   <fallback_sequence>
-    1. .claude/standards/tech-stack.md
-    2. .claude/CLAUDE.md
+    1.#file:.claude/standards/tech-stack.md
+    2.#file:.claude/CLAUDE.md
     3. Cursor User Rules
   </fallback_sequence>
 </data_sources>
@@ -51,7 +51,7 @@ Use the context-fetcher subagent to collect all required inp duts from the user 
 Use the file-creator subagent to create the following file_structure with validation for write permissions and protection against overwriting existing files:
 
 <file_structure>
-  .claude/
+ #file:.claude/
   └── product/
       ├── mission.md          # Product vision and purpose
       ├── mission-lite.md     # Condensed mission for AI context
@@ -66,7 +66,7 @@ Use the file-creator subagent to create the following file_structure with valida
 
 ### Step 3: Create mission.md
 
-Use the file-creator subagent to create the file: .claude/product/mission.md and use the following template:
+Use the file-creator subagent to create the file:#file:.claude/product/mission.md and use the following template:
 
 <file_template>
   <header>
@@ -178,7 +178,7 @@ Use the file-creator subagent to create the file: .claude/product/mission.md and
 
 ### Step 4: Create tech-stack.md
 
-Use the file-creator subagent to create the file: .claude/product/tech-stack.md and use the following template:
+Use the file-creator subagent to create the file:#file:.claude/product/tech-stack.md and use the following template:
 
 <file_template>
   <header>
@@ -215,8 +215,8 @@ Use the file-creator subagent to create the file: .claude/product/tech-stack.md 
     <for_each item="required_items">
       <if_not_in>user_input</if_not_in>
       <then_check>
-        1. .claude/standards/tech-stack.md
-        2. .claude/CLAUDE.md
+        1.#file:.claude/standards/tech-stack.md
+        2.#file:.claude/CLAUDE.md
         3. Cursor User Rules
       </then_check>
       <else>add_to_missing_list</else>
@@ -238,7 +238,7 @@ Use the file-creator subagent to create the file: .claude/product/tech-stack.md 
 
 ### Step 5: Create mission-lite.md
 
-Use the file-creator subagent to create the file: .claude/product/mission-lite.md for the purpose of establishing a condensed mission for efficient AI context usage.
+Use the file-creator subagent to create the file:#file:.claude/product/mission-lite.md for the purpose of establishing a condensed mission for efficient AI context usage.
 
 Use the following template:
 
@@ -278,7 +278,7 @@ Use the following template:
 
 ### Step 6: Create roadmap.md
 
-Use the file-creator subagent to create the following file: .claude/product/roadmap.md using the following template:
+Use the file-creator subagent to create the following file:#file:.claude/product/roadmap.md using the following template:
 
 <file_template>
   <header>
@@ -328,7 +328,7 @@ Use the file-creator subagent to create the following file: .claude/product/road
 
 ### Step 7: Create decisions.md
 
-Use the file-creator subagent to create the file: .claude/product/decisions.md using the following template:
+Use the file-creator subagent to create the file:#file:.claude/product/decisions.md using the following template:
 
 <file_template>
   <header>
@@ -391,7 +391,7 @@ Use the file-creator subagent to create the file: .claude/product/decisions.md u
 
 <final_checklist>
   <verify>
-    - [ ] All 5 files created in .claude/product/
+    - [ ] All 5 files created in#file:.claude/product/
     - [ ] User inputs incorporated throughout
     - [ ] Missing tech stack items requested
     - [ ] Initial decisions documented

@@ -276,7 +276,7 @@ These are the tasks to be completed for the spec detailed in #file:.claude/specs
 
 ### Single File Request
 ```
-Create file: .claude/specs/2025-01-29-auth/spec.md
+Create file:#file:.claude/specs/2025-01-29-auth/spec.md
 Content: [provided content]
 Template: spec
 ```
@@ -284,7 +284,7 @@ Template: spec
 ### Batch Creation Request
 ```
 Create spec structure:
-Directory: .claude/specs/2025-01-29-user-auth/
+Directory:#file:.claude/specs/2025-01-29-user-auth/
 Files:
 - spec.md (content: [provided])
 - spec-lite.md (content: [provided])
@@ -296,7 +296,7 @@ Files:
 ### Product Documentation Request
 ```
 Create product documentation:
-Directory: .claude/product/
+Directory:#file:.claude/product/
 Files:
 - mission.md (content: [provided])
 - mission-lite.md (content: [provided])
@@ -329,7 +329,7 @@ Files:
 
 ### Success
 ```
-✓ Created directory: .claude/specs/2025-01-29-user-auth/
+✓ Created directory:#file:.claude/specs/2025-01-29-user-auth/
 ✓ Created file: spec.md
 ✓ Created file: spec-lite.md
 ✓ Created directory: sub-specs/

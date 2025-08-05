@@ -13,7 +13,7 @@ encoding: UTF-8
 Generate detailed feature specifications aligned with product roadmap and mission.
 
 <pre_flight_check>
-  EXECUTE: .claude/instructions/meta/pre-flight.md
+  EXECUTE:#file:.claude/instructions/meta/pre-flight.md
 </pre_flight_check>
 
 <process_flow>
@@ -106,8 +106,8 @@ Determine accurate date for folder naming by creating a temporary file to extrac
   <primary_method>
     <name>File System Timestamp</name>
     <process>
-      1. CREATE directory if not exists: .claude/specs/
-      2. CREATE temporary file: .claude/specs/.date-check
+      1. CREATE directory if not exists:#file:.claude/specs/
+      2. CREATE temporary file:#file:.claude/specs/.date-check
       3. READ file creation timestamp from filesystem
       4. EXTRACT date in YYYY-MM-DD format
       5. DELETE temporary file
@@ -150,7 +150,7 @@ Determine accurate date for folder naming by creating a temporary file to extrac
 
 ### Step 5: Spec Folder Creation
 
-Use the file-creator subagent to create directory: .claude/specs/YYYY-MM-DD-spec-name/ using the date from step 4.
+Use the file-creator subagent to create directory:#file:.claude/specs/YYYY-MM-DD-spec-name/ using the date from step 4.
 
 Use kebab-case for spec name. Maximum 5 words in name.
 
@@ -176,7 +176,7 @@ Use kebab-case for spec name. Maximum 5 words in name.
 
 ### Step 6: Create spec.md
 
-Use the file-creator subagent to create the file: .claude/specs/YYYY-MM-DD-spec-name/spec.md using this template:
+Use the file-creator subagent to create the file:#file:.claude/specs/YYYY-MM-DD-spec-name/spec.md using this template:
 
 <file_template>
   <header>
@@ -270,7 +270,7 @@ Use the file-creator subagent to create the file: .claude/specs/YYYY-MM-DD-spec-
 
 ### Step 7: Create spec-lite.md
 
-Use the file-creator subagent to create the file: .claude/specs/YYYY-MM-DD-spec-name/spec-lite.md for the purpose of establishing a condensed spec for efficient AI context usage.
+Use the file-creator subagent to create the file:#file:.claude/specs/YYYY-MM-DD-spec-name/spec-lite.md for the purpose of establishing a condensed spec for efficient AI context usage.
 
 <file_template>
   <header>
@@ -616,7 +616,7 @@ Evaluate readiness to begin implementation after completing all previous steps, 
 
 <execution_flow>
   IF user_confirms_yes:
-    REFERENCE: .claude/instructions/core/execute-tasks.md
+    REFERENCE:#file:.claude/instructions/core/execute-tasks.md
     FOCUS: Only Task 1 and its subtasks
     CONSTRAINT: Do not proceed to additional tasks without explicit user request
   ELSE:
