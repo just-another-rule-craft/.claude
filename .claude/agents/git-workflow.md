@@ -138,7 +138,7 @@ Create pull request:
 - All tests passing ✓
 
 ## Related
-- Spec: @.claude/specs/[spec-folder]/
+- Spec: #file:.claude/specs/[spec-folder]/
 - Issue: #[number] (if applicable)
 ```
 

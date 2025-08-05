@@ -29,7 +29,7 @@ Use the context-fetcher subagent to identify spec initiation method by either fi
     - "what's next?"
   </trigger_phrases>
   <actions>
-    1. CHECK @.claude/product/roadmap.md
+    1. CHECK #file:.claude/product/roadmap.md
     2. FIND next uncompleted item
     3. SUGGEST item to user
     4. WAIT for approval
@@ -48,7 +48,7 @@ Use the context-fetcher subagent to identify spec initiation method by either fi
 
 ### Step 2: Context Gathering (Conditional)
 
-Use the context-fetcher subagent to read @.claude/product/mission-lite.md and @.claude/product/tech-stack.md only if not already in context to ensure minimal context for spec alignment.
+Use the context-fetcher subagent to read #file:.claude/product/mission-lite.md and #file:.claude/product/tech-stack.md only if not already in context to ensure minimal context for spec alignment.
 
 <conditional_logic>
   IF both mission-lite.md AND tech-stack.md already read in current context:
@@ -306,7 +306,7 @@ Use the file-creator subagent to create the file: sub-specs/technical-spec.md us
   <header>
     # Technical Specification
 
-    This is the technical specification for the spec detailed in @.claude/specs/YYYY-MM-DD-spec-name/spec.md
+    This is the technical specification for the spec detailed in #file:.claude/specs/YYYY-MM-DD-spec-name/spec.md
   </header>
 </file_template>
 
@@ -364,7 +364,7 @@ Use the file-creator subagent to create the file: sub-specs/database-schema.md O
   <header>
     # Database Schema
 
-    This is the database schema implementation for the spec detailed in @.claude/specs/YYYY-MM-DD-spec-name/spec.md
+    This is the database schema implementation for the spec detailed in #file:.claude/specs/YYYY-MM-DD-spec-name/spec.md
   </header>
 </file_template>
 
@@ -406,7 +406,7 @@ Use the file-creator subagent to create file: sub-specs/api-spec.md ONLY IF API 
   <header>
     # API Specification
 
-    This is the API specification for the spec detailed in @.claude/specs/YYYY-MM-DD-spec-name/spec.md
+    This is the API specification for the spec detailed in #file:.claude/specs/YYYY-MM-DD-spec-name/spec.md
   </header>
 </file_template>
 
@@ -450,9 +450,9 @@ Request user review of spec.md and all sub-specs files, waiting for approval or 
 <review_request>
   I've created the spec documentation:
 
-  - Spec Requirements: @.claude/specs/YYYY-MM-DD-spec-name/spec.md
-  - Spec Summary: @.claude/specs/YYYY-MM-DD-spec-name/spec-lite.md
-  - Technical Spec: @.claude/specs/YYYY-MM-DD-spec-name/sub-specs/technical-spec.md
+  - Spec Requirements: #file:.claude/specs/YYYY-MM-DD-spec-name/spec.md
+  - Spec Summary: #file:.claude/specs/YYYY-MM-DD-spec-name/spec-lite.md
+  - Technical Spec: #file:.claude/specs/YYYY-MM-DD-spec-name/sub-specs/technical-spec.md
   [LIST_OTHER_CREATED_SPECS]
 
   Please review and let me know if any changes are needed before I create the task breakdown.
@@ -525,11 +525,11 @@ Evaluate strategic impact without loading decisions.md and update it only if the
 
   <manual_reads>
     <mission_lite>
-      - IF NOT already in context: READ @.claude/product/mission-lite.md
+      - IF NOT already in context: READ #file:.claude/product/mission-lite.md
       - IF already in context: SKIP reading
     </mission_lite>
     <roadmap>
-      - IF NOT already in context: READ @.claude/product/roadmap.md
+      - IF NOT already in context: READ #file:.claude/product/roadmap.md
       - IF already in context: SKIP reading
     </roadmap>
     <decisions>
@@ -540,8 +540,8 @@ Evaluate strategic impact without loading decisions.md and update it only if the
 
 <decision_analysis>
   <review_against>
-    - @.claude/product/mission-lite.md (conditional)
-    - @.claude/product/roadmap.md (conditional)
+    - #file:.claude/product/mission-lite.md (conditional)
+    - #file:.claude/product/roadmap.md (conditional)
   </review_against>
   <criteria>
     - significantly deviates from mission in mission-lite.md
@@ -571,7 +571,7 @@ Evaluate strategic impact without loading decisions.md and update it only if the
   **ID:** DEC-[NEXT_NUMBER]
   **Status:** Accepted
   **Category:** [technical/product/business/process]
-  **Related Spec:** @.claude/specs/YYYY-MM-DD-spec-name/
+  **Related Spec:** #file:.claude/specs/YYYY-MM-DD-spec-name/
 
   ### Decision
 
@@ -631,9 +631,9 @@ Evaluate readiness to begin implementation after completing all previous steps, 
 
 <standards>
   <follow>
-    - @.claude/product/code-style.md
-    - @.claude/product/dev-best-practices.md
-    - @.claude/product/tech-stack.md
+    - #file:.claude/product/code-style.md
+    - #file:.claude/product/dev-best-practices.md
+    - #file:.claude/product/tech-stack.md
   </follow>
   <maintain>
     - Consistency with product mission

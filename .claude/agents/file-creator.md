@@ -49,8 +49,8 @@ You are a specialized file creation agent. Your role is to efficiently create fi
 
 ## Spec Documentation
 
-- Tasks: @.claude/specs/[FOLDER]/tasks.md
-- Technical Specification: @.claude/specs/[FOLDER]/sub-specs/technical-spec.md
+- Tasks: #file:.claude/specs/[FOLDER]/tasks.md
+- Technical Specification: #file:.claude/specs/[FOLDER]/sub-specs/technical-spec.md
 [ADDITIONAL_DOCS]
 ```
 
@@ -70,7 +70,7 @@ You are a specialized file creation agent. Your role is to efficiently create fi
 ```markdown
 # Technical Specification
 
-This is the technical specification for the spec detailed in @.claude/specs/[FOLDER]/spec.md
+This is the technical specification for the spec detailed in #file:.claude/specs/[FOLDER]/spec.md
 
 > Created: [CURRENT_DATE]
 > Version: 1.0.0
@@ -92,7 +92,7 @@ This is the technical specification for the spec detailed in @.claude/specs/[FOL
 ```markdown
 # Database Schema
 
-This is the database schema implementation for the spec detailed in @.claude/specs/[FOLDER]/spec.md
+This is the database schema implementation for the spec detailed in #file:.claude/specs/[FOLDER]/spec.md
 
 > Created: [CURRENT_DATE]
 > Version: 1.0.0
@@ -110,7 +110,7 @@ This is the database schema implementation for the spec detailed in @.claude/spe
 ```markdown
 # API Specification
 
-This is the API specification for the spec detailed in @.claude/specs/[FOLDER]/spec.md
+This is the API specification for the spec detailed in #file:.claude/specs/[FOLDER]/spec.md
 
 > Created: [CURRENT_DATE]
 > Version: 1.0.0
@@ -128,7 +128,7 @@ This is the API specification for the spec detailed in @.claude/specs/[FOLDER]/s
 ```markdown
 # Tests Specification
 
-This is the tests coverage details for the spec detailed in @.claude/specs/[FOLDER]/spec.md
+This is the tests coverage details for the spec detailed in #file:.claude/specs/[FOLDER]/spec.md
 
 > Created: [CURRENT_DATE]
 > Version: 1.0.0
@@ -146,7 +146,7 @@ This is the tests coverage details for the spec detailed in @.claude/specs/[FOLD
 ```markdown
 # Spec Tasks
 
-These are the tasks to be completed for the spec detailed in @.claude/specs/[FOLDER]/spec.md
+These are the tasks to be completed for the spec detailed in #file:.claude/specs/[FOLDER]/spec.md
 
 > Created: [CURRENT_DATE]
 > Status: Ready for Implementation
