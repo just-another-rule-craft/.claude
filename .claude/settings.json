@@ -1,0 +1,20 @@
+{
+  "allowedCommands": [
+    "mix test",
+    "mix compile",
+    "mix format",
+    "mix ecto.migrate",
+    "mix ecto.gen.migration",
+    "mix phx.gen.live",
+    "mix phx.server",
+    "git add",
+    "git commit",
+    "git status",
+    "git diff",
+    "git log",
+    "gh pr create",
+    "gh pr view",
+    "gh issue create",
+    "gh issue view"
+  ]
+}
